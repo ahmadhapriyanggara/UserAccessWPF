@@ -25,6 +25,8 @@ namespace UserAccess
         public MainWindow()
         {
             InitializeComponent();
+
+            UsernameTextBox.Text = Properties.Settings.Default.Username;
         }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
@@ -57,7 +59,6 @@ namespace UserAccess
                 Home home = new Home(username);
                 home.Show();
             }
-
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
@@ -65,6 +66,12 @@ namespace UserAccess
             this.Hide();
             Register register = new Register();
             register.Show();
+        }
+
+        private void RememberCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Username = UsernameTextBox.Text;
+            Properties.Settings.Default.Save();
         }
     }
 }

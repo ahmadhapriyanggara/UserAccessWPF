@@ -15,6 +15,7 @@
                     <TextBlock Name="UsernameErrorMessage" Margin="15 0 15 0" OpacityMask="Crimson" Foreground="Red"></TextBlock>
                     <PasswordBox Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="Password" Name="PasswordTextBox"></PasswordBox>
                     <TextBlock Name="PasswordErrorMessage" Margin="15 0 15 0" OpacityMask="Crimson" Foreground="Red"></TextBlock>
+                    <CheckBox Content="Remember Me" Margin="13 0 15 0" Name="RememberCheck" Checked="RememberCheck_Checked"></CheckBox>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Margin="35 35 35 35" Content="SIGN IN" Background="#FF1A477E" Name="SignIn" Click="SignIn_Click"></Button>
                         <Button Margin="35 35 35 35" Content="SIGN UP" Background="#FF1A477E" Name="SignUp" Click="SignUp_Click"></Button>

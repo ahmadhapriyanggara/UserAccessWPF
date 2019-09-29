@@ -46,10 +46,6 @@ namespace UserAccess.Controller
                 }
                 else {
                     MessageBox.Show("Login Successful!");
-                    //MainWindow main = new MainWindow();
-                    //main.Hide();
-                    //Home home = new Home();
-                    //home.Show();
                 }
             }
         }
