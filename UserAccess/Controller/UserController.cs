@@ -30,7 +30,9 @@ namespace UserAccess.Controller
             }
         }
 
-        public void UserLogin(string uname, string pword) {
+        public bool UserLogin(string uname, string pword) {
+
+            var status = true;
 
             User user = new Model.User();
             MyContext _context = new MyContext();
@@ -39,15 +41,18 @@ namespace UserAccess.Controller
 
             if (get == null) {
                 MessageBox.Show("You are not Registered yet!");
+                status = false;
             }
             else {
                 if (get.Password != pword) {
                     MessageBox.Show("Your Password is Incorrect!");
+                    status = false;
                 }
                 else {
                     MessageBox.Show("Login Successful!");
                 }
             }
+            return status;
         }
 
         public void ChangePass(string uname, string pword) {

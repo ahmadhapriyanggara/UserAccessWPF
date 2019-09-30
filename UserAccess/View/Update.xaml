@@ -11,7 +11,7 @@
             <Image Source="/Assets/Logo.png" Width="100" Height="100"></Image>
             <Border Margin="10 20" CornerRadius="10" Background="White">
                 <StackPanel Margin="5">
-                    <TextBox Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Username" Name="UsernameTextBox"></TextBox>
+                    <TextBox Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Username" Name="UsernameTextBox" IsEnabled="False"></TextBox>
                     <TextBlock Name="UsernameErrorMessage" Margin="15 0 15 0" OpacityMask="Crimson" Foreground="Red"></TextBlock>
                     <PasswordBox Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" materialDesign:HintAssist.Hint="Password" Name="PasswordTextBox"></PasswordBox>
                     <TextBlock Name="PasswordErrorMessage" Margin="15 0 15 0" OpacityMask="Crimson" Foreground="Red"></TextBlock>

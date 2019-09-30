@@ -54,10 +54,12 @@ namespace UserAccess
                 string username = UsernameTextBox.Text;
                 string password = PasswordTextBox.Password;
 
-                CallUser.UserLogin(username, password);
-                this.Hide();
-                Home home = new Home(username);
-                home.Show();
+                var status = CallUser.UserLogin(username, password);
+                if (status == true) {
+                    this.Hide();
+                    Home home = new Home(username);
+                    home.Show();
+                }
             }
         }
 
